@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Vowel Counter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            padding-top: 50px;
+        }
+
+        .container {
+            background: white;
+            width: 400px;
+            margin: auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        input[type="text"] {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        h3 {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Vowel Counter</h1>
+
+        <form method="POST">
+            <input type="text" name="input_string" placeholder="Enter a word or sentence" required>
+            <br>
+            <button type="submit">Count Vowels</button>
+        </form>
+
+        {% if number_of_vowels is not none %}
+        <h3>Number of Vowels: {{ number_of_vowels }}</h3>
+        {% endif %}
+    </div>
+
+</body>
+
+</html>
